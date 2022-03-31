@@ -92,3 +92,6 @@ Listen {{ RUCIO_METRICS_PORT }}
  WSGIScriptAlias /metrics                /usr/local/lib/python3.6/site-packages/rucio/web/rest/metrics.py process-group=rucio application-group=rucio
 </VirtualHost>
 {% endif %}
+
+SetEnv PYTHONWARNINGS always::DeprecationWarning
+SetEnv SQLALCHEMY_WARN_20 1
